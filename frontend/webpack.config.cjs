@@ -35,7 +35,7 @@ const config = (config) => {
           if (arr3[index3].options?.postcssOptions) {
             arr3[index3].options.postcssOptions.config = path.resolve(
               __dirname,
-              "./postcss.config.js"
+              "./postcss.config.cjs"
             );
           }
         }
