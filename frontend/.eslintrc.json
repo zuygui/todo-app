@@ -3,6 +3,21 @@
   "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
+      "files": ["*.cjs", "*.js"],
+      "parserOptions": {
+        "sourceType": "script",
+        "ecmaVersion": "latest"
+      },
+      "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+      "env": {
+        "node": true,
+        "es6": true
+      },
+      "rules": {
+        "prettier/prettier": ["error"]
+      }
+    },
+    {
       "files": ["*.ts"],
       "parserOptions": {
         "project": ["tsconfig.json"]
@@ -31,7 +46,8 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "prettier/prettier": ["error"]
       }
     },
     {
